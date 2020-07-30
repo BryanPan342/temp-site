@@ -27,7 +27,6 @@ body {
 }
 
 .site-wrapper {
-    z-index: 99;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -35,6 +34,7 @@ body {
 }
 
 .body-wrapper {
+    z-index: 99;
     display: grid;
     place-items: center;
     width: var(--body-width);
