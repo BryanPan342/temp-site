@@ -1,3 +1,25 @@
+:root {
+    --dim: calc(100vw - 600px);
+    --header-font-size: calc(var(--dim) /40 + 40px);
+    --text-font-size: calc(var(--dim) / 80 + 20px);
+    --margin: 2.5vh;
+    --profile-img: 20vw;
+    --body-width: 50vw;
+    --social-img: 5vh;
+}
+
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+    :root{
+        --header-font-size: calc(100vw /30 + 20px);
+        --text-font-size: calc(100vw / 60 + 10px);
+        --margin: 1.5vh;
+        --profile-img: 40vw;
+        --body-width: 80vw;
+        --social-img: 4vh;
+    }
+}
+
+
 body {
     margin: 0px;
     font-family: 'Frank Ruhl Libre';
@@ -15,40 +37,41 @@ body {
 .body-wrapper {
     display: grid;
     place-items: center;
-    width: 50vw;
+    width: var(--body-width);
     height: auto;
     text-align: center;
 }
 
 .profile {
-    max-width: 20vw;
+    max-width: var(--profile-img);
     height:auto;
     border-radius: 100%;
-    margin: 2.5vh;
+    margin: var(--margin);
     border: .75vh solid #F8F8F8;
 }
 
 .header {
-    font-size: 50px;
+    font-size: var(--header-font-size);
     font-weight: bold;
-    margin: 2.5vh;
+    margin: var(--margin);
 }
 
 .text {
-    font-size: 25px;
-    margin: 2.5vh;
+    font-size: var(--text-font-size);
+    margin: var(--margin);
 }
 
+/* Social Media */
 .social-wrapper {
-    width: 50vw;
+    width: 100%;
 }
 
 .social {
-    height: 5vh;
-    width: auto;
-    margin: 2.5vh;
+    height: var(--social-img);
+    margin: var(--margin);
 }
 
+/* Background Animation */
 .background-wrapper {
     position: fixed;
     z-index: 1;
