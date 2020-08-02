@@ -1,3 +1,17 @@
+/* Table of Contents
+/* ------------------------------------------------------------
+
+1.  Globals
+2.  Personal
+3.  Background
+
+*/
+
+
+/* 1. Globals - Variables | Body | Site Wrapper
+/* ---------------------------------------------------------- */
+
+/* Web Variables */
 :root {
     --dim: calc(100vw - 600px);
     --header-font-size: calc(var(--dim) /40 + 40px);
@@ -8,6 +22,7 @@
     --social-img: 5vh;
 }
 
+/* Mobile Variables */
 @media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
     :root{
         --header-font-size: calc(100vw /30 + 20px);
@@ -18,7 +33,6 @@
         --social-img: 4vh;
     }
 }
-
 
 body {
     margin: 0px;
@@ -33,6 +47,8 @@ body {
     place-items: center;
 }
 
+/* 2. Personal - Profile | Content | Social Media
+/* ---------------------------------------------------------- */
 .body-wrapper {
     z-index: 99;
     display: grid;
@@ -61,7 +77,6 @@ body {
     margin: var(--margin);
 }
 
-/* Social Media */
 .social-wrapper {
     width: 100%;
 }
@@ -71,7 +86,8 @@ body {
     margin: var(--margin);
 }
 
-/* Background Animation */
+/* 3. Background - Bubbly Animations
+/* ---------------------------------------------------------- */
 .background-wrapper {
     position: fixed;
     z-index: 1;
@@ -202,18 +218,13 @@ body {
     animation-duration: 11s;
 }
 
-
-
 @keyframes animate {
-
     0%{
         transform: translateY(0) rotate(0deg);
         opacity: 1;
     }
-
     100%{
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
     }
-
 }
