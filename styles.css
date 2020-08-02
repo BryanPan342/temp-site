@@ -204,7 +204,6 @@ body {
 }
 
 .background li:nth-child(8) {
-  border-radius: 100%;
   left: 50%;
   width: 25px;
   height: 25px;
@@ -230,11 +229,11 @@ body {
 
 @keyframes animate {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(var(--translate)) rotate(720deg);
+    transform: translateY(var(--translate));
     opacity: 0;
   }
 }
